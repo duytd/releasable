@@ -14,9 +14,11 @@
 ActiveRecord::Schema.define(version: 20171104113256) do
 
   create_table "releasable_releases", force: :cascade do |t|
-    t.string  "key"
-    t.string  "user_ids"
-    t.boolean "active",   default: false
+    t.string   "key"
+    t.string   "user_ids"
+    t.boolean  "release_all", default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "releasable_releases", ["key"], name: "index_releasable_releases_on_key"

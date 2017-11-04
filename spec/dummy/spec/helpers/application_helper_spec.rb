@@ -36,6 +36,12 @@ RSpec.describe ApplicationHelper, type: :helper do
 
       it { is_expected.to be_falsy }
     end
+
+    context "when release is marked as releasing for all users" do
+      let(:release) { create(:release, user_ids: white_list_user_ids, release_all: true) }
+
+      it { is_expected.to be_truthy }
+    end
   end
 end
 

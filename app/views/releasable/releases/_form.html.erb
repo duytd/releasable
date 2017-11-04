@@ -1,12 +1,14 @@
 <%= form_for @release  do |f| %>
   <p>
     <%= f.label :user_ids %>
-    <%= f.input :user_ids %>
+    <%= f.text_field :user_ids %>
   </p>
 
   <p>
-    <%= f.label :active %>
-    <%= f.checkbox :active %>
+    <%= f.label :release_all %>
+    <%= f.check_box :release_all %>
+    <br />
+    <i>(Be careful when checking this option because the feature will be released for all user)</i>
   </p>
 
   <%= f.submit %>

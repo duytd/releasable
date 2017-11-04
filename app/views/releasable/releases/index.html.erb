@@ -1,27 +1,36 @@
+<%= link_to "Create release", new_release_path %>
+
 <table>
   <thead>
     <tr>
       <th>ID</th>
       <th>Key</th>
       <th>User IDs</th>
-      <th>Active</th>
+      <th>Release All</th>
       <th>Created At</th>
       <th>Updated At</th>
+      <th></th>
       <th></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @releases.each do |release| %>
+    <% if @releases.size > 0 %>
+      <% @releases.each do |release| %>
+        <tr>
+          <td><%= release.id %></td>
+          <td><%= release.key %></td>
+          <td><%= release.user_ids %></td>
+          <td><%= release.release_all? %></td>
+          <td><%= release.created_at %></td>
+          <td><%= release.updated_at %></td>
+          <td><%= link_to "Edit", edit_release_path(release) %></td>
+          <td><%= link_to "Delete", release, method: :delete, data: { confirm: "Are you sure?" } %></td>
+        </tr>
+      <% end %>
+    <% else %>
       <tr>
-        <td><%= release.id %></td>
-        <td><%= release.key %></td>
-        <td><%= release.user_ids %></td>
-        <td><%= release.user_ids %></td>
-        <td><%= release.active %></td>
-        <td><%= release.created_at %></td>
-        <td><%= release.updated_at %></td>
-        <td><%= link_to "Delete", release, method: :delete, data: { confirm: "Are you sure?" } %></td>
+        <td colspan="7">No release has been created yet</td>
       </tr>
     <% end %>
   </tbody>

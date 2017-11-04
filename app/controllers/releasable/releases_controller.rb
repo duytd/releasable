@@ -1,7 +1,7 @@
 module Releasable
   class ReleasesController < ApplicationController
     def index
-      @releases = Releasable::Release.all
+      @releases = Release.all
     end
 
     def new
@@ -13,7 +13,7 @@ module Releasable
     end
 
     def create
-      @release = Releasable.new(release_params)
+      @release = Release.new(release_params)
 
       if @release.save
         redirect_to releases_path, notice: "Release #{@release.key} has been created"
@@ -42,11 +42,11 @@ module Releasable
     private
 
     def retrieve_release
-      @release = Releasable.find(params[:id])
+      @release = Release.find(params[:id])
     end
 
     def release_params
-      params.require(:release).permit(:user_ids, :active)
+      params.require(:release).permit(:user_ids, :release_all)
     end
   end
 end
