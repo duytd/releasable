@@ -1,0 +1,88 @@
+Rails:
+  Enabled: true
+
+# Accept single-line methods with no body
+SingleLineMethods:
+  AllowIfMethodIsEmpty: true
+
+# Top-level documentation of classes and modules are needless
+Documentation:
+  Enabled: false
+
+# Allow to chain of block after another block that spans multiple lines
+MultilineBlockChain:
+  Enabled: false
+
+# Allow `->` literal for multi line blocks
+Lambda:
+  Enabled: false
+
+# Both nested and compact are okay
+ClassAndModuleChildren:
+  Enabled: false
+
+# Specifying param names is unnecessary
+Style/SingleLineBlockParams:
+  Enabled: false
+
+# Prefer Kernel#sprintf
+FormatString:
+  EnforcedStyle: sprintf
+
+# Maximum line length
+LineLength:
+  Max: 100
+
+# Use "postfix if/unless" if the lenght is less than this
+IfUnlessModifier:
+  MaxLineLength: 80
+
+# Maximum method length
+MethodLength:
+  Max: 20
+
+# Tune to MethodLength
+Metrics/AbcSize:
+  Max: 30
+
+# Tune to MethodLength
+Metrics/ClassLength:
+  Max: 200
+
+# Prefer double_quotes strings unless your string literal contains escape chars
+StringLiterals:
+  EnforcedStyle: double_quotes
+
+# Prefer raise over fail for exceptions
+Style/SignalException:
+  EnforcedStyle: only_raise
+
+# Allow empty condition in case statements
+Style/EmptyCaseCondition:
+  Enabled: false
+
+# Prefer trailing comma in argument lists
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+# Prefer trailing comma in array and hash literals
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: comma
+
+# Prefer parentheses for almost all percent literals
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%i': '()'
+    '%I': '()'
+    '%w': '()'
+    '%W': '()'
+
+# Allow `has_` as prefix of predicate methods
+Style/PredicateName:
+  NamePrefixBlacklist:
+    - is_
+    - have_
+
+# Prefer `has_?` style for Hash methods
+Style/PreferredHashMethods:
+  EnforcedStyle: verbose
