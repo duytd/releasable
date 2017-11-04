@@ -1,0 +1,13 @@
+<%= form_for @release  do |f| %>
+  <p>
+    <%= f.label :user_ids %>
+    <%= f.input :user_ids %>
+  </p>
+
+  <p>
+    <%= f.label :active %>
+    <%= f.checkbox :active %>
+  </p>
+
+  <%= f.submit %>
+<% end %>

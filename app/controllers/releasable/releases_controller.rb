@@ -44,5 +44,9 @@ module Releasable
     def retrieve_release
       @release = Releasable.find(params[:id])
     end
+
+    def release_params
+      params.require(:release).permit(:user_ids, :active)
+    end
   end
 end
