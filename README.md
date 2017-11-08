@@ -56,6 +56,10 @@ New feature release can be checked by:
 ```ruby
   releasable?("7daaa288-69fd-41d3-b185-7be2d255524a", current_user)
 ```
+## Todo
+
+- Add rubocop to `.travis.yml` and fix all rubocop error
+- Add generator for custom views
 
 ## Contributing
 
