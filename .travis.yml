@@ -5,5 +5,4 @@ install:
   - gem install bundler --pre
   - bundle install
 script:
-  - rubocop
   - bundle exec rspec
