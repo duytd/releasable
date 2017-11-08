@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+ - 2.3.4
+install:
+  - gem install bundler --pre
+  - bundle install
+script:
+  - rubocop
+  - bundle exec rspec

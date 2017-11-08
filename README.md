@@ -1,5 +1,7 @@
 # Releasable
 
+[![CI](https://travis-ci.org/duytd/releasable.svg?branch=master)](https://travis-ci.org/duytd/releasable)
+
 Pre-release Ruby On Rails application for white-list users. Release with confidence on production.
 
 Releasing on production is quite tricky because staging/development environment cannot be 100% same as production environment. Therefore, it is better to release it first for some test users only.
