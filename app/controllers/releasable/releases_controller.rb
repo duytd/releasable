@@ -46,7 +46,7 @@ module Releasable
     end
 
     def release_params
-      params.require(:release).permit(:user_ids, :release_all)
+      params.require(:release).permit(:key, :user_ids, :release_all)
     end
   end
 end
