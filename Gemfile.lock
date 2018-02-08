@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    releasable (0.0.1)
-      rails (>= 4.1.0, < 5.2)
+    releasable (0.1.1)
+      rails (>= 4.0, < 5.2)
 
 GEM
   remote: https://rubygems.org/
