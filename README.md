@@ -1,5 +1,7 @@
 # Releasable
 
+[![CI](https://travis-ci.org/duytd/releasable.svg?branch=master)](https://travis-ci.org/duytd/releasable)
+
 Pre-release Ruby On Rails application for white-list users. Release with confidence on production.
 
 Releasing on production is quite tricky because staging/development environment cannot be 100% same as production environment. Therefore, it is better to release it first for some test users only.
@@ -54,6 +56,10 @@ New feature release can be checked by:
 ```ruby
   releasable?("7daaa288-69fd-41d3-b185-7be2d255524a", current_user)
 ```
+## Todo
+
+- Add rubocop to `.travis.yml` and fix all rubocop error
+- Add generator for custom views
 
 ## Contributing
 
