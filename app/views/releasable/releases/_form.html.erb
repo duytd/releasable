@@ -1,5 +1,13 @@
 <%= form_for @release  do |f| %>
   <p>
+    <%= f.label :key %>
+    <%= f.text_field :key %>
+
+    <br />
+    <i>(Optional)</i>
+  </p>
+
+  <p>
     <%= f.label :user_ids %>
     <%= f.text_field :user_ids %>
 

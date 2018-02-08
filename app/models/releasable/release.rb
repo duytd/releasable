@@ -3,7 +3,7 @@ module Releasable
     validates :key, presence: true, uniqueness: true
     validates :user_ids, presence: true
 
-    before_validation :generate_key, on: :create
+    before_validation :generate_key, on: :create, unless: proc { |a| a.key.present? }
 
     private
 
